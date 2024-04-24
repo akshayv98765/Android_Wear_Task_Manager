@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddTaskActivity"
+    android:padding="1dp"
+    tools:ignore="MissingClass">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="1dp"
+        app:layout_boxedEdges="all">
+
+        <!-- Task ID Text Field -->
+        <EditText
+            android:id="@+id/editTextTaskID"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:hint="Task ID"
+            android:layout_marginTop="5dp"
+            android:inputType="none"
+            android:enabled="false"/>
+
+        <!-- Task Name Input Field -->
+        <EditText
+            android:id="@+id/editTextTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/orange"
+            android:hint="Task Name"
+            android:inputType="text"
+            android:layout_marginTop="5dp"/>
+
+        <!-- Task Due Date & Time Input Field -->
+        <EditText
+            android:id="@+id/editTextDueDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:background="@drawable/bordered_text_box"
+            android:imeOptions="actionSend"
+            android:textColorHint="@color/orange"
+            android:hint="Due Date/Time"
+            android:inputType="none"
+            android:layout_marginTop="5dp"
+            android:focusable="false"
+            android:onClick="showDateTimePicker"/>
+
+        <!-- Button to Add Task -->
+        <Button
+            android:id="@+id/buttonAddTask"
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:text="Add Task"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:padding="1dp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="5dp"
+            android:onClick="onAddSessionButtonClick"
+            tools:ignore="OnClick"/>
+
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>
